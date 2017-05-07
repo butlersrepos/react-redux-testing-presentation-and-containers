@@ -1,7 +1,7 @@
-import { Provider } from 'react-redux'
+import { Provider } from "react-redux"
 import Container from "../../src/components/container.jsx"
-import ReactTestUtils from 'react-dom/test-utils'
-import { clickAction } from '../../src/actions'
+import ReactTestUtils from "react-dom/test-utils"
+import { clickAction } from "../../src/actions"
 
 describe("Container component", () => {
 	let statesMesssage = "i am the state!";
@@ -23,7 +23,7 @@ describe("Container component", () => {
 	})
 
 	test("clicking the button dispatches the correct action", () => {
-		ReactTestUtils.Simulate.click($('button'))
+		ReactTestUtils.Simulate.click($("button"))
 		expect(dispatchSpy.mock.calls.length).toBe(1)
 		expect(dispatchSpy.mock.calls[0][0]).toEqual(clickAction())
 	})

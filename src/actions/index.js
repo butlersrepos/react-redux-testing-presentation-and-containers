@@ -1,3 +1,3 @@
-import clickAction from './click'
+import clickAction from "./click"
 
 export { clickAction }
